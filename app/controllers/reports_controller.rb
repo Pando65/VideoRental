@@ -1,14 +1,6 @@
 class ReportsController < ApplicationController
-<<<<<<< HEAD
   def example
       @members  = @con.query "SELECT * FROM members"
-=======
-  def listamiembros
-      @members  = @con.query "SELECT * FROM members"
-  end
-  def nombrevideos
-      @videos  = @con.query "SELECT * FROM videos"
->>>>>>> origin/master
   end
   def query1
       @vquery  = @con.query "SELECT members.sex, COUNT(sex) as Number FROM members GROUP BY sex"

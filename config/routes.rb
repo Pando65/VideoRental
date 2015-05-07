@@ -7,7 +7,6 @@ Rails.application.routes.draw do
     resources :videoforrents
     resources :rentalagreements
     
-<<<<<<< HEAD
     get '/query1', to: 'reports#query1', as: :q1
     get '/query2', to: 'reports#query2', as: :q2
     get '/query3', to: 'reports#query3', as: :q3
@@ -26,9 +25,4 @@ Rails.application.routes.draw do
     get '/query16', to: 'reports#query16', as: :q16
     
     
-    
-=======
-    get '/listademiembros', to: 'reports#listamiembros', as: :listamiembros
-    get '/titulos', to: 'reports#nombrevideos', as: :nombrevideos
->>>>>>> origin/master
 end
