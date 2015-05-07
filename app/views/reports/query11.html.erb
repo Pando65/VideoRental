@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="col-md-6">
+        <h4>Movie with the highest number of rentals</h4>
+    </div>
+    <table class="table table-bordered table-striped table-condensed">
+        <thead>
+            <div class="row">
+                <tr>
+                <th>Video title</th>
+                <th>Number of rents</th>
+                </tr>
+            </div>
+        </thead>
+    <tbody>
+        <div class="row">
+            <% @vquery.each do |p| %>
+                <tr>
+                <td><%= p['title'] %></td>
+                <td><%= p['numberOfRents'] %></td>
+                </tr>
+            <% end %>
+        </div>
+    </tbody>
+    </table>
+</div>

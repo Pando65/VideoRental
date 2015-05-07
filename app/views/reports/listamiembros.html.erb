@@ -1,0 +1,15 @@
+
+<table class="table table-bordered table-striped table-condensed">
+  <thead>
+    <tr>
+      <th>Member name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @members.each do |p| %>
+      <tr>
+        <td><%= p['fName'] %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

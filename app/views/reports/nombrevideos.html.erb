@@ -1,0 +1,14 @@
+<table class="table table-bordered table-striped table-condensed">
+  <thead>
+    <tr>
+      <th>Video name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @videos.each do |p| %>
+      <tr>
+        <td><%= p['title'] %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="col-md-6">
+        <h4>Category and number of titles in each category</h4>
+    </div>
+    <table class="table table-bordered table-striped table-condensed">
+        <thead>
+            <div class="row">
+                <tr>
+                <th>Category</th>
+                <th>Number of Copies</th>
+                </tr>
+            </div>
+        </thead>
+    <tbody>
+        <div class="row">
+            <% @vquery.each do |p| %>
+                <tr>
+                <td><%= p['category'] %></td>
+                <td><%= p['NumberOfCopies'] %></td>
+                </tr>
+            <% end %>
+        </div>
+    </tbody>
+    </table>
+</div>
