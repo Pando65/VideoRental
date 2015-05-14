@@ -14,7 +14,7 @@
       <li class="dropdown">
       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Video Rents<span class="caret"></span></a>
       <ul class="dropdown-menu" role="menu">
-        <li><%= link_to "Update Video Rents", q11_path %></li> 
+        <li><%= link_to "Update Video Rents", rentalagreements_path %></li> 
         <li class="divider"></li>
         <li><%= link_to "Movie titles with the highest daily rent", q8_path %></li> 
         <li><%= link_to "Title of movie and income obtained by rent", q9_path %></li>
@@ -28,7 +28,7 @@
       <li class="dropdown">
       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Members<span class="caret"></span></a>
       <ul class="dropdown-menu" role="menu">
-        <li><%= link_to "Update Members", q11_path %></li> 
+        <li><%= link_to "Update Members", members_path %></li> 
         <li class="divider"></li>
         <li><%= link_to "Number of female and male members", q1_path %></li>
         <li><%= link_to "First and last name of all members sorted by first name", q3_path %></li>         
@@ -46,8 +46,9 @@
       <li class="dropdown">
       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Inventory<span class="caret"></span></a>
       <ul class="dropdown-menu" role="menu">
-        <li><%= link_to "Update Videos", videos_path %></li> 
-        <li><%= link_to "Update Copies", q11_path %></li> 
+        <li><%= link_to "Update Videos", root_path %></li> 
+        <li><%= link_to "Update Copies", videoforrents_path %></li> 
+        <li><%= link_to "Update Directors", directors_path %></li>
         <li class="divider"></li>
         <li><%= link_to "Cardinality of video table", q2_path %></li>
         <li><%= link_to "Video title and name of the director", q4_path %></li>          

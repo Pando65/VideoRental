@@ -1,11 +1,11 @@
 class VideosController < CrudController::Base
     def new 
-        @video = Video.new
+        @object = Video.new
     end
     def create 
-        @video = Video.new(video_params)
+        @object = Video.new(video_params)
         if @video.save 
-            redirect_to q1_path
+            redirect_to videos_path
         else
             render 'new'
         end

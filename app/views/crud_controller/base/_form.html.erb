@@ -1,8 +1,8 @@
-<%= simple_form_for(@video) do |f| %>
+<%= simple_form_for(@object) do |f| %>
   <% @attributes.each do |attribute, v| %>
     <% options = {} %>
     <% options = { as: :datetime_picker } if v.type == :datetime %>
-    <% options = { as: :date_picker } if v.type == :date %>
+    <% options = { as: :date_icker } if v.type == :date %>
     <% if attribute.end_with? '_id' %>
       <%= f.association attribute.gsub('_id','') %>
     <% else %>
