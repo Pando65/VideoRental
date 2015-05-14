@@ -12,71 +12,51 @@
   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
     <ul class="nav navbar-nav">
       <li class="dropdown">
-      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Videos<span class="caret"></span></a>
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Video Rents<span class="caret"></span></a>
       <ul class="dropdown-menu" role="menu">
-        <li><%= link_to "View video", q11_path %></li>  
-        <li><%= link_to "Add video", q11_path %></li>
-        <li><%= link_to "Update video", q11_path %></li>          
-        <li><%= link_to "Remove video", q11_path %></li>          
-      </ul>
-      </li>
-    </ul>
-    <ul class="nav navbar-nav">
-      <li class="dropdown">
-      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Members<span class="caret"></span></a>
-      <ul class="dropdown-menu" role="menu">
-        <li><%= link_to "View member", q11_path %></li>  
-        <li><%= link_to "Add memeber", q11_path %></li>
-        <li><%= link_to "Update member", q11_path %></li>          
-        <li><%= link_to "Remove member", q11_path %></li>          
-      </ul>
-      </li>
-    </ul> 
-    <ul class="nav navbar-nav">
-      <li class="dropdown">
-      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Directors<span class="caret"></span></a>
-      <ul class="dropdown-menu" role="menu">
-        <li><%= link_to "View directors", q11_path %></li>  
-        <li><%= link_to "Add directors", q11_path %></li>
-        <li><%= link_to "Update directors", q11_path %></li>          
-        <li><%= link_to "Remove directors", q11_path %></li>          
+        <li><%= link_to "Update Video Rents", q11_path %></li> 
+        <li class="divider"></li>
+        <li><%= link_to "Movie titles with the highest daily rent", q8_path %></li> 
+        <li><%= link_to "Title of movie and income obtained by rent", q9_path %></li>
+        <li><%= link_to "Movie with the highest number of rentals", q11_path %></li> 
+        <li><%= link_to "Title of movie that has never been rented", q13_path %></li>        
       </ul>
       </li>
     </ul>  
+      
+<ul class="nav navbar-nav">
+      <li class="dropdown">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Members<span class="caret"></span></a>
+      <ul class="dropdown-menu" role="menu">
+        <li><%= link_to "Update Members", q11_path %></li> 
+        <li class="divider"></li>
+        <li><%= link_to "Number of female and male members", q1_path %></li>
+        <li><%= link_to "First and last name of all members sorted by first name", q3_path %></li>         
+        <li><%= link_to "Remove video", q11_path %></li>    
+        <li><%= link_to "Members with movie rented but not returned", q10_path %></li>
+        <li><%= link_to "Members who celebrate birthday today", q12_path %></li>      
+        <li><%= link_to "Members that were born same year as Lorna Smith", q14_path %></li>    
+        <li><%= link_to "Members with more and less rented videos", q15_path %></li>    
+        <li><%= link_to "Members who have seen same movies as Don Nelson", q16_path %></li>            
+      </ul>
+      </li>
+    </ul>  
+      
     <ul class="nav navbar-nav">
       <li class="dropdown">
-      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Rental Agreements<span class="caret"></span></a>
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Inventory<span class="caret"></span></a>
       <ul class="dropdown-menu" role="menu">
-        <li><%= link_to "View rental agreements", q11_path %></li>  
-        <li><%= link_to "Add rental agreements", q11_path %></li>
-        <li><%= link_to "Update rental agreements", q11_path %></li>  
-        <li><%= link_to "Remove rental agreements", q11_path %></li>          
+        <li><%= link_to "Update Videos", videos_path %></li> 
+        <li><%= link_to "Update Copies", q11_path %></li> 
+        <li class="divider"></li>
+        <li><%= link_to "Cardinality of video table", q2_path %></li>
+        <li><%= link_to "Video title and name of the director", q4_path %></li>          
+        <li><%= link_to "Economic value in inventory", q5_path %></li>  
+        <li><%= link_to "Video title and number of copies", q6_path %></li>
+        <li><%= link_to "Category and number of titles in each category", q7_path %></li> 
       </ul>
       </li>
     </ul>        
-    <ul class="nav navbar-nav">
-      <li class="dropdown">
-      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Reports <span class="caret"></span></a>
-      <ul class="dropdown-menu" role="menu">
-        <li><%= link_to "Number of female and male members", q1_path %></li>
-        <li><%= link_to "Cardinality of video table", q2_path %></li>
-        <li><%= link_to "First and last name of all members sorted by first name", q3_path %></li>
-        <li><%= link_to "Video title and name of the director", q4_path %></li>  
-        <li><%= link_to "Economic value in inventory", q5_path %></li>
-        <li><%= link_to "Video title and number of copies", q6_path %></li>
-        <li><%= link_to "Category and number of titles in each category", q7_path %></li>
-        <li><%= link_to "Movie titles with the highest daily rent", q8_path %></li> 
-        <li><%= link_to "Title of movie and income obtained by rent", q9_path %></li>     
-        <li><%= link_to "Members with movie rented but not returned", q10_path %></li>             
-        <li><%= link_to "Movie with the highest number of rentals", q11_path %></li>   
-        <li><%= link_to "Members who celebrate birthday today", q12_path %></li>
-        <li><%= link_to "Title of movie that has never been rented", q13_path %></li>        
-        <li><%= link_to "Members that were born same year as Lorna Smith", q14_path %></li>    
-        <li><%= link_to "Members with more and less rented videos", q15_path %></li>    
-        <li><%= link_to "Members who have seen same movies as Don Nelson", q16_path %></li>              
-      </ul>
-      </li>
-    </ul>
   </div><!-- /.navbar-collapse -->
 </div>
 </nav>
