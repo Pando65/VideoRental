@@ -2,10 +2,13 @@
   <% @attributes.each do |attribute, v| %>
     <% options = {} %>
     <% options = { as: :datetime_picker } if v.type == :datetime %>
-    <% options = { as: :date_icker } if v.type == :date %>
+    <% options = { as: :date_picker } if v.type == :date %>
     <% if attribute.end_with? '_id' %>
         <% if attribute == 'director_id' %>
             <b>Director Name</b> <%= f.collection_select :director_id, Director.all, :id, :DirectorName %>
+        <% end %>
+        <% if attribute == 'video_id' %>
+            <b>Title</b> <%= f.collection_select :video_id, Video.all, :id, :title %>
         <% end %>
     <% else %>
       <%= f.input attribute, options %>
