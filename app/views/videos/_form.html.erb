@@ -1,0 +1,19 @@
+<%= simple_form_for(@object) do |f| %>
+  <% @attributes.each do |attribute, v| %>
+    <% options = {} %>
+    <% options = { as: :datetime_picker } if v.type == :datetime %>
+    <% options = { as: :date_picker } if v.type == :date %>
+    <% if attribute.end_with? '_id' %>
+        <% if attribute == 'director_id' %>
+            <b>Director Name</b> <%= f.collection_select :director_id, Director.all, :id, :DirectorName %>
+        <% end %>
+    <% else %>
+      <%= f.input attribute, options %>
+    <% end %>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit t('save', default: 'Save'), class: "btn btn-md btn-primary" %>
+  </div>
+
+<% end %>

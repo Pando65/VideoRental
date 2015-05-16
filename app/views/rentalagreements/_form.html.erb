@@ -1,0 +1,22 @@
+<%= simple_form_for(@object) do |f| %>
+  <% @attributes.each do |attribute, v| %>
+    <% options = {} %>
+    <% options = { as: :datetime_picker } if v.type == :datetime %>
+    <% options = { as: :date_picker } if v.type == :date %>
+    <% if attribute.end_with? '_id' %>
+        <% if attribute == 'videoforrent_id' %>
+            <b>Member</b> <%= f.collection_select :member_id, Member.all, :id, :full_name %><br>
+            <!-- <b>Title</b> <%# f.collection_select :video_id, Video.all, :id, :title %><br> -->
+            <%# f.association :video, collection: @videos %>
+            <b>Copy</b> <%= f.collection_select :videoforrent_id, Videoforrent.all, :id, :id %><br>
+        <% end %>
+    <% else %>
+      <%= f.input attribute, options %>
+    <% end %>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit t('save', default: 'Save'), class: "btn btn-md btn-primary" %>
+  </div>
+
+<% end %>
