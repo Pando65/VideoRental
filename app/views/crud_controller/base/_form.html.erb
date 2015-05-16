@@ -10,6 +10,10 @@
         <% if attribute == 'video_id' %>
             <b>Title</b> <%= f.collection_select :video_id, Video.all, :id, :title %>
         <% end %>
+        <% if attribute == 'videoforrent_id' %>
+            <b>Title</b> <%= f.collection_select :videoforrent_id, Videoforrent.all, :id, :video_id %><br>
+            <b>Member</b> <%= f.collection_select :member_id, Member.all, :id, :fName %>
+        <% end %>
     <% else %>
       <%= f.input attribute, options %>
     <% end %>
