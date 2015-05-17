@@ -52211,3 +52211,104 @@ Processing by VideosController#index as HTML
   Rendered layouts/_nav.html.erb (1.5ms)
   Rendered layouts/_sweet_alerts.html.erb (0.1ms)
 Completed 200 OK in 610ms (Views: 595.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2015-05-17 01:24:25 -0500
+Processing by PublicController#index as HTML
+  Rendered layouts/_sweet_alerts.html.erb (0.9ms)
+  Rendered public/index.html.erb (237.9ms)
+Completed 200 OK in 367ms (Views: 323.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/crossfithomebanner-0ebc3042465015218cfcf3accfd56f5cde0e6d193fc59f694fbb7e44c8d25a43.png" for ::1 at 2015-05-17 01:24:26 -0500
+
+
+Started GET "/videos" for ::1 at 2015-05-17 01:30:20 -0500
+Processing by VideosController#index as HTML
+  [1m[36mVideo Load (0.4ms)[0m  [1mSELECT  `videos`.* FROM `videos` LIMIT 30 OFFSET 0[0m
+  Rendered crud_controller/base/index.html.erb within layouts/application (192.1ms)
+  Rendered layouts/_nav.html.erb (2.0ms)
+  Rendered layouts/_sweet_alerts.html.erb (0.2ms)
+Completed 200 OK in 6096ms (Views: 5985.3ms | ActiveRecord: 50.5ms)
+
+
+Started GET "/assets/bootstrap_and_overwrites.self-32a9ab048d446960a54e8082cc81abbff5da4988954b29bbd378207556a868dc.css?body=1" for ::1 at 2015-05-17 01:30:27 -0500
+
+
+Started GET "/assets/application.self-e859910249080a84cf5c7cd20bf49530c8d106d6a406c88cc822e4a9e73a0efa.css?body=1" for ::1 at 2015-05-17 01:30:27 -0500
+
+
+Started GET "/videos" for ::1 at 2015-05-17 01:30:44 -0500
+Processing by VideosController#index as HTML
+  [1m[35mVideo Load (0.4ms)[0m  SELECT  `videos`.* FROM `videos` LIMIT 30 OFFSET 0
+  Rendered crud_controller/base/index.html.erb within layouts/application (8.6ms)
+  Rendered layouts/_nav.html.erb (1.3ms)
+  Rendered layouts/_sweet_alerts.html.erb (0.1ms)
+Completed 200 OK in 271ms (Views: 269.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/videos/new" for ::1 at 2015-05-17 01:31:01 -0500
+Processing by VideosController#new as HTML
+  [1m[36mDirector Load (0.3ms)[0m  [1mSELECT `directors`.* FROM `directors`[0m
+  Rendered videos/_form.html.erb (243.5ms)
+  Rendered crud_controller/base/new.html.erb within layouts/application (252.6ms)
+  Rendered layouts/_nav.html.erb (2.8ms)
+  Rendered layouts/_sweet_alerts.html.erb (0.6ms)
+Completed 200 OK in 513ms (Views: 509.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/members" for ::1 at 2015-05-17 01:31:06 -0500
+Processing by MembersController#index as HTML
+  [1m[35mMember Load (0.4ms)[0m  SELECT  `members`.* FROM `members` LIMIT 30 OFFSET 0
+  Rendered crud_controller/base/index.html.erb within layouts/application (44.5ms)
+  Rendered layouts/_nav.html.erb (1.7ms)
+  Rendered layouts/_sweet_alerts.html.erb (0.1ms)
+Completed 200 OK in 276ms (Views: 256.2ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/members/new" for ::1 at 2015-05-17 01:31:08 -0500
+Processing by MembersController#new as HTML
+  Rendered crud_controller/base/_form.html.erb (38.5ms)
+  Rendered crud_controller/base/new.html.erb within layouts/application (49.5ms)
+  Rendered layouts/_nav.html.erb (1.0ms)
+  Rendered layouts/_sweet_alerts.html.erb (0.1ms)
+Completed 200 OK in 233ms (Views: 231.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/members" for ::1 at 2015-05-17 01:31:30 -0500
+Processing by MembersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"i6WpkwsArI4D5LzPgO48RrBFSXP8nKh0C6Sh7rzQxyWJqkXzbBjT9zvxPFblPFFN7bw3dzFlW56FpI7SDufI8w==", "member"=>{"fName"=>"Omar", "lName"=>"Manjarrez", "sex"=>"M", "DOB"=>"1992-10-29", "address"=>"Resis", "dateJoined"=>"2015-05-16"}, "commit"=>"Save"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (39.0ms)[0m  INSERT INTO `members` (`fName`, `lName`, `sex`, `DOB`, `address`, `dateJoined`) VALUES ('Omar', 'Manjarrez', 'M', '1992-10-29', 'Resis', '2015-05-16')
+  [1m[36m (72.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/members
+Completed 302 Found in 117ms (ActiveRecord: 111.3ms)
+
+
+Started GET "/members" for ::1 at 2015-05-17 01:31:30 -0500
+Processing by MembersController#index as HTML
+  [1m[35mMember Load (0.3ms)[0m  SELECT  `members`.* FROM `members` LIMIT 30 OFFSET 0
+  Rendered crud_controller/base/index.html.erb within layouts/application (8.1ms)
+  Rendered layouts/_nav.html.erb (0.9ms)
+  Rendered layouts/_sweet_alerts.html.erb (0.1ms)
+Completed 200 OK in 206ms (Views: 203.4ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/members/17" for ::1 at 2015-05-17 01:31:39 -0500
+Processing by MembersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ZjWVUDUl0tUk0CPqlYMFDv73pg+JVW/6YULueGsE49ZkOnkwUj2trBzFo3PwUWgFow7YC0SsnBDvQsFE2TPsAA==", "id"=>"17"}
+  [1m[36mMember Load (0.4ms)[0m  [1mSELECT  `members`.* FROM `members` WHERE `members`.`id` = 17 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM `members` WHERE `members`.`id` = 17[0m
+  [1m[35m (10.2ms)[0m  COMMIT
+Redirected to http://localhost:3000/members
+Completed 302 Found in 43ms (ActiveRecord: 11.0ms)
+
+
+Started GET "/members" for ::1 at 2015-05-17 01:31:40 -0500
+Processing by MembersController#index as HTML
+  [1m[36mMember Load (0.3ms)[0m  [1mSELECT  `members`.* FROM `members` LIMIT 30 OFFSET 0[0m
+  Rendered crud_controller/base/index.html.erb within layouts/application (7.7ms)
+  Rendered layouts/_nav.html.erb (2.6ms)
+  Rendered layouts/_sweet_alerts.html.erb (0.1ms)
+Completed 200 OK in 298ms (Views: 296.1ms | ActiveRecord: 0.3ms)
