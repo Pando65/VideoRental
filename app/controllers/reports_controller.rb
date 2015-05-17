@@ -105,5 +105,24 @@ having count(distinct videoforrents.video_id)=
          fName = 'Don' and lName = 'Nelson')"
 
   end
-
+  def query17
+      @vquery = @con.query "select V.title
+                            from videos V
+                            where V.id IN
+                            (
+                                select B.id
+                                from videoforrents, videos B
+                                where videoforrents.video_id = B.id and videoforrents.available = 1
+                            );"
+  end
+  def query18
+      @vquery = @con.query "select V.title
+                            from videos V
+                            where V.id NOT IN
+                            (
+                                select B.id
+                                from videoforrents, videos B
+                                where videoforrents.video_id = B.id and videoforrents.available = 1
+                            );"
+  end    
 end
