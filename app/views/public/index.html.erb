@@ -1,0 +1,28 @@
+<%# image_tag 'kipping.png', style: 'height: 120px;' %>
+<%= render 'layouts/sweet_alerts' %>
+<div class="background">
+  <div class="jumbotron">
+    <div class="row">
+      <div class="large-12 columns">
+        <div class="imgContainerCompetitions">
+          <%= image_tag 'crossfithomebanner.png', style: 'bottom: 100px;' %>   
+        </div>
+      </div>
+    </div>
+    <section class="top-bar-section">
+      <h3 class="text-centered">
+        Estas son las competencias que tenemos para ti:
+      </h3>
+      <div class="row" style="text-align: center">
+       
+        <div class="col-md-3" style="text-align: center">
+          <%= link_to({action: 'index', controller: "videos"}) do %>
+            <img height="250" src="https://scontent-dfw.xx.fbcdn.net/hphotos-xfp1/v/t1.0-9/10858485_325044637687362_7916633430854051035_n.jpg?oh=c763163b56f9f077d40392feccf92d52&oe=55BA8A95"> 
+            <span class="text-content"><span>High Quality</span></span>
+          <% end %>
+          <h4>Videos</h4>
+        </div>
+
+      </div>
+    </div>
+  </div>

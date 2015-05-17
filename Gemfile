@@ -35,3 +35,5 @@ end
 ## Helping gems
 
 gem 'seed_dump'
+gem 'sweet-alert'
+gem 'sweet-alert-confirm'

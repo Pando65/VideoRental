@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-    root 'videos#index'
+    root 'public#index'
     
     resources :videos
     resources :directors

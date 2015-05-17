@@ -4,5 +4,7 @@
 //= require moment
 //= require bootstrap-datetimepicker
 //= require pickers
+//= require sweet-alert
+//= require sweet-alert-confirm
 //= require_tree .
 //= require turbolinks
