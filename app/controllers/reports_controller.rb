@@ -39,7 +39,15 @@ class ReportsController < ApplicationController
       @vquery = @con.query "SELECT fName, lName FROM members WHERE DOB = CURDATE()"
   end
   def query13
-      @vquery = @con.query "SELECT title FROM videos LEFT JOIN videoforrents ON videos.id = videoforrents.video_id LEFT JOIN rentalagreements ON rentalagreements.videoforrent_id = videoforrents.id WHERE rentalagreements.id is NULL"
+      @vquery = @con.query "select V.title
+FROM videos V
+where V.id NOT IN 
+(
+	select B.id
+	from videos B, videoforrents VF, rentalagreements RA
+	where B.id = VF.video_id and VF.id = RA.videoforrent_id
+
+);"
   end
   def query14
       @vquery = @con.query "SELECT fName, lName FROM members WHERE YEAR(DOB) = ( SELECT YEAR(DOB) FROM members WHERE fName = 'Lorna' and lName = 'Smith' ) AND fName != 'Lorna' and lName != 'Smith' "
