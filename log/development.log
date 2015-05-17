@@ -54955,3 +54955,299 @@ Processing by PublicController#index as HTML
   Rendered layouts/_sweet_alerts.html.erb (0.1ms)
   Rendered public/index.html.erb (3.3ms)
 Completed 200 OK in 9ms (Views: 8.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-05-17 02:53:02 -0500
+Processing by PublicController#index as HTML
+  Rendered layouts/_sweet_alerts.html.erb (0.9ms)
+  Rendered public/index.html.erb (28.6ms)
+Completed 200 OK in 49ms (Views: 42.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/videos" for ::1 at 2015-05-17 02:53:05 -0500
+Processing by VideosController#index as HTML
+  [1m[36mVideo Load (1.6ms)[0m  [1mSELECT  `videos`.* FROM `videos` LIMIT 30 OFFSET 0[0m
+  Rendered crud_controller/base/index.html.erb within layouts/application (50.3ms)
+  Rendered layouts/_nav.html.erb (1.9ms)
+  Rendered layouts/_sweet_alerts.html.erb (0.1ms)
+Completed 200 OK in 473ms (Views: 456.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/bootstrap-datetimepicker.min.self-e05c9d0ac8e97797a5dcb458a4600902fefe5f54dc1279e25fbcc7bcb7a30ee0.css?body=1" for ::1 at 2015-05-17 02:53:06 -0500
+
+
+Started GET "/assets/video_rental.self-4e658add72801482a8ee3b3b98da1c4c87b1d0694d80b0b963e2437ee6121b1b.css?body=1" for ::1 at 2015-05-17 02:53:06 -0500
+
+
+Started GET "/assets/sweet-alert/sweet-alert.self-82e1c4f20d906587d86e6d21d606dc90b283bffd420dddbd2fdf29489d586951.css?body=1" for ::1 at 2015-05-17 02:53:06 -0500
+
+
+Started GET "/assets/sweet-alert.self-4a4c63b3b379fe307cf83e414c8ae532911fc0a1f3cb82fac49a7c36a8c5b78a.css?body=1" for ::1 at 2015-05-17 02:53:06 -0500
+
+
+Started GET "/assets/application.self-e859910249080a84cf5c7cd20bf49530c8d106d6a406c88cc822e4a9e73a0efa.css?body=1" for ::1 at 2015-05-17 02:53:06 -0500
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-17 02:53:06 -0500
+
+
+Started GET "/assets/bootstrap/affix.self-68d1a5161d04ca9fe1b9d9f4114d9426c7798bf90f2703a97aca35c8113469bb.js?body=1" for ::1 at 2015-05-17 02:53:06 -0500
+
+
+Started GET "/assets/bootstrap/alert.self-15ce09eba576e56db3edfd87accc0ff48823df915169e350b4fd97290f96aee1.js?body=1" for ::1 at 2015-05-17 02:53:06 -0500
+
+
+Started GET "/assets/bootstrap/button.self-37c62bff1d75f86f3348b8679873d5156d8b9938b62841038dca21690f4740f1.js?body=1" for ::1 at 2015-05-17 02:53:06 -0500
+
+
+Started GET "/assets/bootstrap/carousel.self-9aaab1a477b9c1156bab751cb8da47f77dace6da88eef8ae830e60f3cff3a8be.js?body=1" for ::1 at 2015-05-17 02:53:06 -0500
+
+
+Started GET "/assets/bootstrap/collapse.self-eeece00cd06a3d7cc071ab7845b549d4991edd0f0895e4be70fe40bac2fb5f4b.js?body=1" for ::1 at 2015-05-17 02:53:06 -0500
+
+
+Started GET "/assets/bootstrap/dropdown.self-a3998e7ca949c04cb86b5c635deb0abcc7a24dc02e81be66b8acfef02d811e45.js?body=1" for ::1 at 2015-05-17 02:53:06 -0500
+
+
+Started GET "/assets/bootstrap/modal.self-f2759e138605770e60526c00c6d86cbb3378da203641f9d6b204c9f0192b9267.js?body=1" for ::1 at 2015-05-17 02:53:06 -0500
+
+
+Started GET "/assets/bootstrap/scrollspy.self-5ea180afe4404f83fc97d997833f2edefd34475b0b5ddab310e27abc2bbd5f2f.js?body=1" for ::1 at 2015-05-17 02:53:06 -0500
+
+
+Started GET "/assets/bootstrap/tab.self-e1bba7115c90301056ee94c4716de2fcbe4498015def2dab9ff9879f339bd245.js?body=1" for ::1 at 2015-05-17 02:53:06 -0500
+
+
+Started GET "/assets/bootstrap/transition.self-7742dca5e6acf313fbb217811b48468282cddf1a9baea5c89ec92e367ef242cb.js?body=1" for ::1 at 2015-05-17 02:53:06 -0500
+
+
+Started GET "/assets/bootstrap/tooltip.self-c3b5c16f394ab9c0391db4431aac4f2d2ddf1bba4c5d3228ed343de05ecc8e83.js?body=1" for ::1 at 2015-05-17 02:53:06 -0500
+
+
+Started GET "/assets/bootstrap/popover.self-2674d99c3ab0415dba0b958a80b3840f70ff6368b155d890306c0291be49453b.js?body=1" for ::1 at 2015-05-17 02:53:06 -0500
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-05-17 02:53:06 -0500
+
+
+Started GET "/assets/moment.self-76ed5f26170ae03324e5b7c44266e3ee36e754e77d581a2314ceceb9768c7ddf.js?body=1" for ::1 at 2015-05-17 02:53:06 -0500
+
+
+Started GET "/assets/bootstrap-datetimepicker.self-db9975dd12536c169cf7f19996d558105d56a8d84fa9ff8b4d5cc8f2990f816a.js?body=1" for ::1 at 2015-05-17 02:53:06 -0500
+
+
+Started GET "/assets/pickers.self-61b924ce4e45340c46d883d6e121a5304176bced59b5d9776e1233fdf4c4badb.js?body=1" for ::1 at 2015-05-17 02:53:06 -0500
+
+
+Started GET "/assets/sweet-alert/sweet-alert.self-28093c0893c75df00563694c0937af567b8629347e570a34e7f1b240fb632fa6.js?body=1" for ::1 at 2015-05-17 02:53:06 -0500
+
+
+Started GET "/assets/sweet-alert.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2015-05-17 02:53:06 -0500
+
+
+Started GET "/assets/sweet-alert-confirm.self-2c74ae8e85fac72b60d17df62c20f32c3273a195af28644965f8e41a614ad0c2.js?body=1" for ::1 at 2015-05-17 02:53:06 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-17 02:53:06 -0500
+
+
+Started GET "/assets/application.self-5c210454b1facc1e317a759f6059324f793841eb23d1f549179b64d1584c55f8.js?body=1" for ::1 at 2015-05-17 02:53:06 -0500
+
+
+Started GET "/images/background.png" for ::1 at 2015-05-17 02:53:06 -0500
+
+ActionController::RoutingError (No route matches [GET] "/images/background.png"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/omjrrz/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/omjrrz/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/omjrrz/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/omjrrz/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.5ms)
+  Rendered /Users/omjrrz/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.3ms)
+  Rendered /Users/omjrrz/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.8ms)
+  Rendered /Users/omjrrz/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/omjrrz/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (180.8ms)
+
+
+Started GET "/assets/fontawesome-webfont-e3870de89716b72cb61a4bba0e17c75783b361cdaba35ea96961c3070bd8ca18.woff?v=4.3.0" for ::1 at 2015-05-17 02:53:06 -0500
+
+
+Started GET "/" for ::1 at 2015-05-17 02:56:03 -0500
+Processing by PublicController#index as HTML
+  Rendered layouts/_sweet_alerts.html.erb (0.1ms)
+  Rendered public/index.html.erb (4.8ms)
+Completed 200 OK in 10ms (Views: 9.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/videos" for ::1 at 2015-05-17 02:56:07 -0500
+Processing by VideosController#index as HTML
+  [1m[35mVideo Load (0.3ms)[0m  SELECT  `videos`.* FROM `videos` LIMIT 30 OFFSET 0
+  Rendered crud_controller/base/index.html.erb within layouts/application (8.4ms)
+  Rendered layouts/_nav.html.erb (1.8ms)
+  Rendered layouts/_sweet_alerts.html.erb (0.1ms)
+Completed 200 OK in 247ms (Views: 244.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/sweet-alert.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2015-05-17 02:56:07 -0500
+
+
+Started GET "/images/background.png" for ::1 at 2015-05-17 02:56:07 -0500
+
+ActionController::RoutingError (No route matches [GET] "/images/background.png"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/omjrrz/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/omjrrz/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/omjrrz/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/omjrrz/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /Users/omjrrz/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (17.5ms)
+  Rendered /Users/omjrrz/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.9ms)
+  Rendered /Users/omjrrz/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/omjrrz/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (191.2ms)
+
+
+Started GET "/rentalagreements" for ::1 at 2015-05-17 02:56:13 -0500
+Processing by RentalagreementsController#index as HTML
+  [1m[36mRentalagreement Load (0.3ms)[0m  [1mSELECT  `rentalagreements`.* FROM `rentalagreements` LIMIT 30 OFFSET 0[0m
+  [1m[35mMember Load (0.5ms)[0m  SELECT  `members`.* FROM `members` WHERE `members`.`id` = 1 LIMIT 1
+  [1m[36mVideoforrent Load (0.4ms)[0m  [1mSELECT  `videoforrents`.* FROM `videoforrents` WHERE `videoforrents`.`id` = 2 LIMIT 1[0m
+  [1m[35mVideo Load (0.3ms)[0m  SELECT  `videos`.* FROM `videos` WHERE `videos`.`id` = 4 LIMIT 1
+  Rendered rentalagreements/index.html.erb within layouts/application (82.3ms)
+  Rendered layouts/_nav.html.erb (1.0ms)
+  Rendered layouts/_sweet_alerts.html.erb (0.1ms)
+Completed 200 OK in 299ms (Views: 207.9ms | ActiveRecord: 76.5ms)
+
+
+Started GET "/query8" for ::1 at 2015-05-17 02:57:18 -0500
+Processing by ReportsController#query8 as HTML
+  Rendered reports/query8.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_nav.html.erb (1.1ms)
+  Rendered layouts/_sweet_alerts.html.erb (0.2ms)
+Completed 200 OK in 294ms (Views: 269.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-05-17 02:57:20 -0500
+Processing by PublicController#index as HTML
+  Rendered layouts/_sweet_alerts.html.erb (0.1ms)
+  Rendered public/index.html.erb (4.4ms)
+Completed 200 OK in 11ms (Views: 10.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-05-17 02:57:20 -0500
+Processing by PublicController#index as HTML
+  Rendered layouts/_sweet_alerts.html.erb (0.1ms)
+  Rendered public/index.html.erb (4.0ms)
+Completed 200 OK in 10ms (Views: 9.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/query8" for ::1 at 2015-05-17 02:57:29 -0500
+Processing by ReportsController#query8 as HTML
+  Rendered reports/query8.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_nav.html.erb (1.0ms)
+  Rendered layouts/_sweet_alerts.html.erb (0.1ms)
+Completed 200 OK in 221ms (Views: 219.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/query14" for ::1 at 2015-05-17 02:57:32 -0500
+Processing by ReportsController#query14 as HTML
+  Rendered reports/query14.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_nav.html.erb (1.1ms)
+  Rendered layouts/_sweet_alerts.html.erb (0.1ms)
+Completed 200 OK in 214ms (Views: 186.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/members" for ::1 at 2015-05-17 02:57:33 -0500
+Processing by MembersController#index as HTML
+  [1m[36mMember Load (0.3ms)[0m  [1mSELECT  `members`.* FROM `members` LIMIT 30 OFFSET 0[0m
+  Rendered crud_controller/base/index.html.erb within layouts/application (6.9ms)
+  Rendered layouts/_nav.html.erb (1.0ms)
+  Rendered layouts/_sweet_alerts.html.erb (0.1ms)
+Completed 200 OK in 192ms (Views: 183.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2015-05-17 03:04:58 -0500
+Processing by PublicController#index as HTML
+  Rendered layouts/_sweet_alerts.html.erb (0.5ms)
+  Rendered public/index.html.erb (488.4ms)
+Completed 200 OK in 518ms (Views: 502.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sweet-alert.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2015-05-17 03:04:59 -0500
+
+
+Started GET "/images/background.png" for ::1 at 2015-05-17 03:04:59 -0500
+
+ActionController::RoutingError (No route matches [GET] "/images/background.png"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/omjrrz/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/omjrrz/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/omjrrz/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/omjrrz/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered /Users/omjrrz/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.6ms)
+  Rendered /Users/omjrrz/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.9ms)
+  Rendered /Users/omjrrz/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/omjrrz/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (106.1ms)
+
+
+Started GET "/assets/crossfithomebanner.png" for ::1 at 2015-05-17 03:04:59 -0500
