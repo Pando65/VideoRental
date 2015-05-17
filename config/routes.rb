@@ -22,5 +22,7 @@ Rails.application.routes.draw do
     get '/query13', to: 'reports#query13', as: :q13
     get '/query14', to: 'reports#query14', as: :q14
     get '/query15', to: 'reports#query15', as: :q15
-    get '/query16', to: 'reports#query16', as: :q16    
+    get '/query16', to: 'reports#query16', as: :q16  
+    get '/query17', to: 'reports#query17', as: :q17
+    get '/query18', to: 'reports#query18', as: :q18
 end
