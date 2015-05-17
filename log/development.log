@@ -53840,3 +53840,144 @@ Processing by VideosController#index as HTML
   Rendered layouts/_nav.html.erb (0.9ms)
   Rendered layouts/_sweet_alerts.html.erb (0.1ms)
 Completed 200 OK in 231ms (Views: 210.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/members" for ::1 at 2015-05-17 02:03:11 -0500
+Processing by MembersController#index as HTML
+  [1m[36mMember Load (1.0ms)[0m  [1mSELECT  `members`.* FROM `members` LIMIT 30 OFFSET 0[0m
+  Rendered crud_controller/base/index.html.erb within layouts/application (30.9ms)
+  Rendered layouts/_nav.html.erb (1.9ms)
+  Rendered layouts/_sweet_alerts.html.erb (0.3ms)
+Completed 200 OK in 357ms (Views: 340.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/members?utf8=%E2%9C%93&search=Karen" for ::1 at 2015-05-17 02:03:15 -0500
+Processing by MembersController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"Karen"}
+  [1m[35mMember Load (7.3ms)[0m  SELECT  `members`.* FROM `members` WHERE (fName LIKE '%Karen%' OR lName LIKE '%Karen%' OR sex LIKE '%Karen%' OR DOB LIKE '%Karen%' OR address LIKE '%Karen%' OR dateJoined LIKE '%Karen%') LIMIT 30 OFFSET 0
+  Rendered crud_controller/base/index.html.erb within layouts/application (12.7ms)
+  Rendered layouts/_nav.html.erb (1.0ms)
+  Rendered layouts/_sweet_alerts.html.erb (0.1ms)
+Completed 200 OK in 305ms (Views: 281.4ms | ActiveRecord: 7.3ms)
+
+
+Started GET "/members?utf8=%E2%9C%93&search=F" for ::1 at 2015-05-17 02:03:21 -0500
+Processing by MembersController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"F"}
+  [1m[36mMember Load (1.7ms)[0m  [1mSELECT  `members`.* FROM `members` WHERE (fName LIKE '%F%' OR lName LIKE '%F%' OR sex LIKE '%F%' OR DOB LIKE '%F%' OR address LIKE '%F%' OR dateJoined LIKE '%F%') LIMIT 30 OFFSET 0[0m
+  Rendered crud_controller/base/index.html.erb within layouts/application (8.1ms)
+  Rendered layouts/_nav.html.erb (0.8ms)
+  Rendered layouts/_sweet_alerts.html.erb (0.1ms)
+Completed 200 OK in 207ms (Views: 193.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for ::1 at 2015-05-17 02:03:37 -0500
+Processing by PublicController#index as HTML
+  Rendered layouts/_sweet_alerts.html.erb (0.1ms)
+  Rendered public/index.html.erb (4.1ms)
+Completed 200 OK in 10ms (Views: 9.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-05-17 02:03:37 -0500
+Processing by PublicController#index as HTML
+  Rendered layouts/_sweet_alerts.html.erb (0.1ms)
+  Rendered public/index.html.erb (3.1ms)
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/videos" for ::1 at 2015-05-17 02:03:41 -0500
+Processing by VideosController#index as HTML
+  [1m[35mVideo Load (0.4ms)[0m  SELECT  `videos`.* FROM `videos` LIMIT 30 OFFSET 0
+  Rendered crud_controller/base/index.html.erb within layouts/application (6.3ms)
+  Rendered layouts/_nav.html.erb (1.9ms)
+  Rendered layouts/_sweet_alerts.html.erb (0.1ms)
+Completed 200 OK in 219ms (Views: 206.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/videos?utf8=%E2%9C%93&search=The+Rock" for ::1 at 2015-05-17 02:03:53 -0500
+Processing by VideosController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"The Rock"}
+  [1m[36mVideo Load (6.3ms)[0m  [1mSELECT  `videos`.* FROM `videos` WHERE (title LIKE '%The Rock%' OR certificate LIKE '%The Rock%' OR category LIKE '%The Rock%' OR dailyRental LIKE '%The Rock%' OR price LIKE '%The Rock%') LIMIT 30 OFFSET 0[0m
+  Rendered crud_controller/base/index.html.erb within layouts/application (12.3ms)
+  Rendered layouts/_nav.html.erb (1.0ms)
+  Rendered layouts/_sweet_alerts.html.erb (0.1ms)
+Completed 200 OK in 228ms (Views: 211.4ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/directors" for ::1 at 2015-05-17 02:04:00 -0500
+Processing by DirectorsController#index as HTML
+  [1m[35mDirector Load (0.3ms)[0m  SELECT  `directors`.* FROM `directors` LIMIT 30 OFFSET 0
+  Rendered crud_controller/base/index.html.erb within layouts/application (8.2ms)
+  Rendered layouts/_nav.html.erb (2.0ms)
+  Rendered layouts/_sweet_alerts.html.erb (0.1ms)
+Completed 200 OK in 210ms (Views: 174.6ms | ActiveRecord: 20.7ms)
+
+
+Started GET "/directors?utf8=%E2%9C%93&search=Roger" for ::1 at 2015-05-17 02:04:04 -0500
+Processing by DirectorsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"Roger"}
+  [1m[36mDirector Load (0.3ms)[0m  [1mSELECT  `directors`.* FROM `directors` WHERE (directorNo LIKE '%Roger%' OR DirectorName LIKE '%Roger%') LIMIT 30 OFFSET 0[0m
+  Rendered crud_controller/base/index.html.erb within layouts/application (4.6ms)
+  Rendered layouts/_nav.html.erb (0.9ms)
+  Rendered layouts/_sweet_alerts.html.erb (0.1ms)
+Completed 200 OK in 193ms (Views: 191.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2015-05-17 02:04:08 -0500
+Processing by PublicController#index as HTML
+  Rendered layouts/_sweet_alerts.html.erb (0.1ms)
+  Rendered public/index.html.erb (3.4ms)
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-05-17 02:04:08 -0500
+Processing by PublicController#index as HTML
+  Rendered layouts/_sweet_alerts.html.erb (0.1ms)
+  Rendered public/index.html.erb (3.7ms)
+Completed 200 OK in 9ms (Views: 8.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-05-17 02:05:16 -0500
+Processing by PublicController#index as HTML
+  Rendered layouts/_sweet_alerts.html.erb (1.4ms)
+  Rendered public/index.html.erb (19.3ms)
+Completed 200 OK in 35ms (Views: 28.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/crossfithomebanner-0ebc3042465015218cfcf3accfd56f5cde0e6d193fc59f694fbb7e44c8d25a43.png" for ::1 at 2015-05-17 02:05:16 -0500
+
+
+Started GET "/videos" for ::1 at 2015-05-17 02:05:17 -0500
+Processing by VideosController#index as HTML
+  [1m[35mVideo Load (0.7ms)[0m  SELECT  `videos`.* FROM `videos` LIMIT 30 OFFSET 0
+  Rendered crud_controller/base/index.html.erb within layouts/application (31.0ms)
+  Rendered layouts/_nav.html.erb (4.2ms)
+  Rendered layouts/_sweet_alerts.html.erb (0.1ms)
+Completed 200 OK in 366ms (Views: 346.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/videos" for ::1 at 2015-05-17 02:05:20 -0500
+Processing by VideosController#index as HTML
+  [1m[36mVideo Load (0.3ms)[0m  [1mSELECT  `videos`.* FROM `videos` LIMIT 30 OFFSET 0[0m
+  Rendered crud_controller/base/index.html.erb within layouts/application (7.7ms)
+  Rendered layouts/_nav.html.erb (2.9ms)
+  Rendered layouts/_sweet_alerts.html.erb (0.1ms)
+Completed 200 OK in 279ms (Views: 266.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/directors" for ::1 at 2015-05-17 02:05:25 -0500
+Processing by DirectorsController#index as HTML
+  [1m[35mDirector Load (0.4ms)[0m  SELECT  `directors`.* FROM `directors` LIMIT 30 OFFSET 0
+  Rendered crud_controller/base/index.html.erb within layouts/application (7.1ms)
+  Rendered layouts/_nav.html.erb (0.9ms)
+  Rendered layouts/_sweet_alerts.html.erb (0.1ms)
+Completed 200 OK in 193ms (Views: 184.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/videos" for ::1 at 2015-05-17 02:05:28 -0500
+Processing by VideosController#index as HTML
+  [1m[36mVideo Load (0.4ms)[0m  [1mSELECT  `videos`.* FROM `videos` LIMIT 30 OFFSET 0[0m
+  Rendered crud_controller/base/index.html.erb within layouts/application (7.1ms)
+  Rendered layouts/_nav.html.erb (0.9ms)
+  Rendered layouts/_sweet_alerts.html.erb (0.1ms)
+Completed 200 OK in 204ms (Views: 192.4ms | ActiveRecord: 0.4ms)
