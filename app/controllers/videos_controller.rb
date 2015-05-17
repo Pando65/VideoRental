@@ -5,9 +5,11 @@ class VideosController < CrudController::Base
     def create 
         @object = Video.new(video_params)
         if @object.save 
+            flash[:success] = "#{model} saved succesfully."
             redirect_to videos_path
         else
-            render 'new'
+            flash[:warning] = "The #{model} could not be saved."
+            render :new
         end
     end 
     private

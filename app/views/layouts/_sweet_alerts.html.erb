@@ -1,0 +1,10 @@
+<!-- Flash bootstrap element -->
+<% unless flash.empty? %>
+  <% [:success, :info, :danger, :error, :warning].each do |condition| %>
+    <% if flash[condition] %>
+    <script>
+      swal({ title: "<%= condition %>", text: "<%= flash[condition] %>", type: "<%= condition %>" });
+    </script> 
+    <% end %>
+  <% end %>
+<% end %>

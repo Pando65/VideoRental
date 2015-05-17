@@ -5,9 +5,11 @@ class DirectorsController < CrudController::Base
     def create 
         @object = Director.new(director_params)
         if @object.save 
+            flash[:success] = "#{model} saved succesfully."
             redirect_to directors_path
         else
-            render 'new'
+            flash[:warning] = "The #{model} could not be saved."
+            render :new
         end
     end 
     private

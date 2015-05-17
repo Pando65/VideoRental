@@ -5,11 +5,14 @@ class MembersController < CrudController::Base
     def create 
         @object = Member.new(member_params)
         if @object.save 
+            flash[:success] = "#{model} saved succesfully."
             redirect_to members_path
         else
-            render 'new'
+            flash[:warning] = "The #{model} could not be saved."
+            render :new
         end
-    end 
+    end
+
     private
     def member_params
         params.require(:member).permit(:fName, :lName, :sex, :DOB, :address, :dateJoined)
