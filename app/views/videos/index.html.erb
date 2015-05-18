@@ -37,9 +37,9 @@
                 <td><%=element.title%></td>
                 <td><%=element.certificate%></td>
                 <td><%=element.category%></td>
-                <td><%=element.daily_rental%></td>
+                <td><%=element.dailyRental%></td>
                 <td><%=element.price%></td>
-                 <td><%=element.director.name%></td>
+                 <td><%=element.director.DirectorName%></td>
                 <td> <%= link_to edit_polymorphic_path(element), class: 'btn btn-primary btn-xs' do %> <span class="fa fa-pencil"></span> <% end %> </td>
                 <td> <%= link_to polymorphic_url(element),
                   :method => :delete,
