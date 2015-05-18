@@ -1,8 +1,8 @@
 <div class="container">
     <div class="col-md-6">
-        <h4>Members with more and less rented videos</h4>
+        <h3>Members with the highest and the least number of rentals</h3>
     </div>
-    <table class="table table-bordered table-striped table-condensed">
+    <table class="table table-bordered table-striped table-condensed table-hover report-table">
         <thead>
             <div class="row">
                 <tr>
@@ -16,7 +16,7 @@
             <% @vquery.each do |p| %>
                 <tr>
                 <td><%= p['Nombre'] %></td>
-                <td><%= p['Posicion'] %></td>                
+                <td><%= p['Position'] %></td>                
                 </tr>
             <% end %>
         </div>

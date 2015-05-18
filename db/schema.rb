@@ -14,17 +14,17 @@
 ActiveRecord::Schema.define(version: 0) do
 
   create_table "directors", force: :cascade do |t|
-    t.string "directorNo",   limit: 5,  null: false
-    t.string "DirectorName", limit: 25, null: false
+    t.string "name", limit: 25, null: false
+    t.string "nationality", limit: 50
   end
 
   create_table "members", force: :cascade do |t|
-    t.string "fName",      limit: 15, null: false
-    t.string "lName",      limit: 15, null: false
+    t.string "first_ame",      limit: 15, null: false
+    t.string "last_name",      limit: 15, null: false
     t.string "sex",        limit: 1,  null: false
-    t.date   "DOB"
+    t.date   "date_of_birth"
     t.string "address",    limit: 50
-    t.date   "dateJoined"
+    t.date   "date_joined"
   end
 
   create_table "rentalagreements", force: :cascade do |t|
@@ -48,7 +48,7 @@ ActiveRecord::Schema.define(version: 0) do
     t.string  "title",       limit: 30,                         null: false
     t.string  "certificate", limit: 10
     t.string  "category",    limit: 10
-    t.decimal "dailyRental",            precision: 8, scale: 2, null: false
+    t.decimal "daily_rental",            precision: 8, scale: 2, null: false
     t.decimal "price",                  precision: 8, scale: 2, null: false
     t.integer "director_id", limit: 4
   end

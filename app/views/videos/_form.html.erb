@@ -5,7 +5,7 @@
     <% options = { as: :date_picker } if v.type == :date %>
     <% if attribute.end_with? '_id' %>
         <% if attribute == 'director_id' %>
-            <b>Director Name</b> <%= f.collection_select :director_id, Director.all, :id, :DirectorName %>
+            <b>Director Name</b> <%= f.collection_select :director_id, Director.all, :id, :name %>
         <% end %>
     <% else %>
       <%= f.input attribute, options %>

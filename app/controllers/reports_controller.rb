@@ -9,7 +9,7 @@ class ReportsController < ApplicationController
       @vquery  = @con.query "SELECT COUNT(*) as Cardinality FROM videos"
   end    
   def query3
-      @vquery = @con.query "SELECT * FROM members ORDER BY fName, lName"
+      @vquery = @con.query "SELECT * FROM members ORDER BY first_name, last_name"
   end
   def query4
       @vquery = @con.query "SELECT * FROM videos JOIN directors ON directors.id = videos.director_id"
@@ -21,22 +21,22 @@ class ReportsController < ApplicationController
       @vquery = @con.query "SELECT videos.title, COUNT(videos.id) as NumberOfCopies FROM videos JOIN videoforrents ON videos.id = videoforrents.video_id GROUP BY videos.id, videos.title"
   end
   def query7
-      @vquery = @con.query "SELECT category, COUNT(videos.category) as NumberOfCopies FROM videos GROUP BY category ORDER BY NumberOfCopies DESC"
+      @vquery = @con.query "SELECT category, COUNT(videos.title) as NumberOfVideos FROM videos GROUP BY category ORDER BY NumberOfVideos DESC"
   end
   def query8
-     @vquery = @con.query "SELECT title FROM videos WHERE dailyRental = (SELECT MAX(dailyRental) FROM videos )"
+     @vquery = @con.query "SELECT title FROM videos WHERE daily_rental = (SELECT MAX(daily_rental) FROM videos )"
   end
   def query9
-      @vquery = @con.query "SELECT title, SUM(DATEDIFF(dateReturn, dateOut)*dailyRental) AS Income FROM videos, rentalagreements, videoforrents WHERE videos.id = videoforrents.video_id and rentalagreements.videoforrent_id = videoforrents.id GROUP BY title"
+      @vquery = @con.query "SELECT title, SUM(DATEDIFF(dateReturn, dateOut)*daily_rental) AS Income FROM videos, rentalagreements, videoforrents WHERE videos.id = videoforrents.video_id and rentalagreements.videoforrent_id = videoforrents.id GROUP BY title"
   end
   def query10
-      @vquery = @con.query "SELECT DISTINCT fName, lName FROM members JOIN rentalagreements ON members.id = rentalagreements.member_id WHERE dateReturn is NULL"
+      @vquery = @con.query "SELECT DISTINCT first_name, last_name FROM members JOIN rentalagreements ON members.id = rentalagreements.member_id WHERE dateReturn is NULL"
   end
   def query11
       @vquery = @con.query "SELECT title, COUNT(rentalagreements.id) As numberOfRents FROM videos, rentalagreements, videoforrents WHERE videos.id = videoforrents.video_id and rentalagreements.videoforrent_id = videoforrents.id GROUP BY title having count(rentalagreements.id) >= ALL (select COUNT(rentalagreements.id) FROM videos, rentalagreements, videoforrents WHERE videos.id = videoforrents.video_id and rentalagreements.videoforrent_id = videoforrents.id GROUP BY title)"
   end
   def query12
-      @vquery = @con.query "SELECT fName, lName FROM members WHERE DOB = CURDATE()"
+      @vquery = @con.query "SELECT first_name, last_name FROM members WHERE date_of_birth = CURDATE()"
   end
   def query13
       @vquery = @con.query "select V.title
@@ -50,10 +50,10 @@ where V.id NOT IN
 );"
   end
   def query14
-      @vquery = @con.query "SELECT fName, lName FROM members WHERE YEAR(DOB) = ( SELECT YEAR(DOB) FROM members WHERE fName = 'Lorna' and lName = 'Smith' ) AND fName != 'Lorna' and lName != 'Smith' "
+      @vquery = @con.query "SELECT first_name, last_name FROM members WHERE YEAR(date_of_birth) = ( SELECT YEAR(date_of_birth) FROM members WHERE first_name = 'Lorna' and last_name = 'Smith' ) AND first_name != 'Lorna' and last_name != 'Smith' "
   end
   def query15
-      @vquery = @con.query "select CONCAT(fName,' ', lName) AS Nombre, 'with more rented videos' AS 'Posicion'
+      @vquery = @con.query "select CONCAT(first_name,' ', last_name) AS Nombre, 'with the highest number of rentals' AS 'Position'
 from members
 where members.id in
    (select rentalagreements.member_id
@@ -64,7 +64,7 @@ where members.id in
           from rentalagreements
           group by member_id))
 UNION
-select CONCAT(fName,' ', lName) AS Nombre, 'with less rented videos' AS 'Posicion'
+select CONCAT(first_name,' ', last_name) AS Nombre, 'with the least number of rentals' AS 'Posicion'
 from members
 where members.id in
    (select rentalagreements.member_id
@@ -76,11 +76,11 @@ where members.id in
           group by member_id))"
   end
   def query16
-      @vquery = @con.query "select fName,lName 
+      @vquery = @con.query "select first_name,last_name 
 from members, rentalagreements , videoforrents
 where members.id = rentalagreements.member_id and 
 videoforrents.id = rentalagreements.videoforrent_id and
-    not (fName = 'Don' and lName = 'Nelson')  and 
+    not (first_name = 'Don' and last_name = 'Nelson')  and 
     members.id not in
 (
 select distinct members.id
@@ -93,16 +93,16 @@ select videoforrents.video_id
 from members, rentalagreements , videoforrents
 where members.id = rentalagreements.member_id and 
 videoforrents.id = rentalagreements.videoforrent_id and
- fName = 'Don' and lName = 'Nelson'
+ first_name = 'Don' and last_name = 'Nelson'
 )
 )
-group by fName,LName
+group by first_name,last_name
 having count(distinct videoforrents.video_id)=
         (select count(distinct videoforrents.video_id) 
          from members, rentalagreements , videoforrents
          where members.id = rentalagreements.member_id and 
          videoforrents.id = rentalagreements.videoforrent_id and
-         fName = 'Don' and lName = 'Nelson')"
+         first_name = 'Don' and last_name = 'Nelson')"
 
   end
   def query17

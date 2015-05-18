@@ -1,13 +1,13 @@
 <div class="container">
     <div class="col-md-6">
-        <h4>Category and number of titles in each category</h4>
+        <h3>Category and number of movies in each category</h3>
     </div>
-    <table class="table table-bordered table-striped table-condensed">
+    <table class="table table-bordered table-striped table-condensed table-hover report-table">
         <thead>
             <div class="row">
                 <tr>
                 <th>Category</th>
-                <th>Number of Copies</th>
+                <th>Number of Movies</th>
                 </tr>
             </div>
         </thead>
@@ -16,7 +16,7 @@
             <% @vquery.each do |p| %>
                 <tr>
                 <td><%= p['category'] %></td>
-                <td><%= p['NumberOfCopies'] %></td>
+                <td><%= p['NumberOfVideos'] %></td>
                 </tr>
             <% end %>
         </div>

@@ -2,7 +2,7 @@ class Member < ActiveRecord::Base
 	has_many :rentalagreements
 
  def full_name
-    fName + ' ' + lName
+    first_name + ' ' + last_name
   end
 
 end

@@ -6,10 +6,7 @@
     <% if attribute.end_with? '_id' %>
         <% if attribute == 'videoforrent_id' %>
             <b>Member</b> <%= f.collection_select :member_id, Member.all, :id, :full_name %><br>
-            <b>Title</b> <%= f.collection_select :videoforrent_id, Videoforrent.all, :id, :title_copy %><br>
-            <!-- <b>Title</b> <%# f.collection_select :videoforrent_id, (Video.all) join (Videoforrent.all), :id, :title %><br> -->
-            <%# f.association :video, collection: @videos %>
-            <b>Copy</b> <%= f.collection_select :videoforrent_id, Videoforrent.all, :id, :id %><br>
+            <b>No of Copy, Movie</b> <%= f.collection_select :videoforrent_id, Videoforrent.all, :id, :copyNo_movie %><br>
         <% end %>
     <% else %>
       <%= f.input attribute, options %>

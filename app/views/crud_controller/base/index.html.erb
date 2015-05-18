@@ -23,7 +23,7 @@
   <div class="row">
     <div class="col-md-12">
       <div class="table-responsive">
-        <table id="<%= @klass.name.pluralize.underscore%>_collection" class="table table-bordered table-striped margin-top-table">
+        <table id="<%= @klass.name.pluralize.underscore%>_collection" class="table table-bordered table-striped table-hover margin-top-table">
           <thead>
             <% @attributes.each do |attribute, _v| %>
               <th><%= @klass.human_attribute_name(attribute) %></th>

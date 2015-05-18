@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-md-12">
       <div class="col-md-3">
-        <h4> <%= @klass.model_name.human.pluralize %> </h4>
+        <h3> Rental Agreements </h3>
       </div>
       <div class="col-md-6">
         <%= form_tag polymorphic_path(@klass), method: 'get' do %>
@@ -16,14 +16,14 @@
         <% end %>
       </div>
       <div class="col-md-3">
-        <%= link_to "Agregar #{@klass.model_name.human}", polymorphic_path(@klass, action: :new), class: 'btn btn-md btn-success pull-right' %>
+        <%= link_to "Add Rental Agreement", polymorphic_path(@klass, action: :new), class: 'btn btn-md btn-success pull-right' %>
       </div>
     </div>
   </div>
   <div class="row">
     <div class="col-md-12">
       <div class="table-responsive">
-        <table id="<%= @klass.name.pluralize.underscore%>_collection" class="table table-bordered table-striped">
+        <table id="<%= @klass.name.pluralize.underscore%>_collection" class="table table-bordered table-striped table-hover margin-top-table">
           <thead>
               <th>Member</th>
               <th>Title</th>

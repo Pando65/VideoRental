@@ -10,16 +10,29 @@
     <a class="navbar-brand" href="<%= root_path %>">Video Rental</a>
   </div>
   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    
+    <ul class="nav navbar-nav">
+      <li class="dropdown">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Movies<span class="caret"></span></a>
+      <ul class="dropdown-menu" role="menu">
+        <li><%= link_to "Videos", videos_path %></li>         
+        <li class="divider"></li>
+        <li><%= link_to "Available movies", q17_path %> </li>           
+        <li><%= link_to "Not available movies", q18_path %> </li>
+      </ul>
+      </li>
+    </ul> 
+
     <ul class="nav navbar-nav">
       <li class="dropdown">
       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> Rents<span class="caret"></span></a>
       <ul class="dropdown-menu" role="menu">
-        <li><%= link_to "Update video rents", rentalagreements_path %></li> 
+        <li><%= link_to "Rental Agreements", rentalagreements_path %></li> 
         <li class="divider"></li>
-        <li><%= link_to "Movie titles with the highest daily rent", q8_path %></li> 
-        <li><%= link_to "Movie with the highest number of rentals", q11_path %></li>           
-        <li><%= link_to "Title of movie and income obtained by rent", q9_path %></li>
-        <li><%= link_to "Title of movie that has never been rented", q13_path %></li>        
+        <li><%= link_to "Movies with the highest daily rent", q8_path %></li> 
+        <li><%= link_to "Movie with highest number of rentals", q11_path %></li>           
+        <li><%= link_to "Movies and income obtained by rent", q9_path %></li>
+        <li><%= link_to "Movies never rented", q13_path %></li>        
       </ul>
       </li>
     </ul>  
@@ -28,13 +41,13 @@
       <li class="dropdown">
       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Members<span class="caret"></span></a>
       <ul class="dropdown-menu" role="menu">
-        <li><%= link_to "Update members", members_path %></li> 
+        <li><%= link_to "Members", members_path %></li> 
         <li class="divider"></li>
-        <li><%= link_to "First and last name of all members sorted by first name", q3_path %></li> 
-        <li><%= link_to "Members that were born same year as Lorna Smith", q14_path %></li>              
+        <li><%= link_to "Members (sorted by first name)", q3_path %></li> 
+        <li><%= link_to "Members born same year as Lorna Smith", q14_path %></li>              
         <li><%= link_to "Members who celebrate birthday today", q12_path %></li>      
         <li><%= link_to "Members who have seen same movies as Don Nelson", q16_path %></li>                 
-        <li><%= link_to "Members with more and less rented videos", q15_path %></li>    
+        <li><%= link_to "Members with the highest and the least number of rentals", q15_path %></li>    
         <li><%= link_to "Members with movie rented but not returned", q10_path %></li>          
         <li><%= link_to "Number of female and male members", q1_path %></li>
         </ul>
@@ -45,20 +58,27 @@
       <li class="dropdown">
       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Inventory<span class="caret"></span></a>
       <ul class="dropdown-menu" role="menu">
-        <li><%= link_to "Update copies", videoforrents_path %></li> 
-        <li><%= link_to "Update directors", directors_path %></li>
-        <li><%= link_to "Update videos", videos_path %></li>           
+        <li><%= link_to "Copies / Videos for rent", videoforrents_path %></li>         
         <li class="divider"></li>
-        <li><%= link_to "Available movies", q17_path %> </li>
-        <li><%= link_to "Cardinality of video table", q2_path %></li>
-        <li><%= link_to "Category and number of titles in each category", q7_path %></li>
-        <li><%= link_to "Economic value in inventory", q5_path %></li>            
-        <li><%= link_to "Not available movies", q18_path %> </li>                    
-        <li><%= link_to "Video title and name of the director", q4_path %></li>          
-        <li><%= link_to "Video title and number of copies", q6_path %></li>
+        <li><%= link_to "Number of movies", q2_path %></li>
+        <li><%= link_to "Category and number of movies in each category", q7_path %></li>
+        <li><%= link_to "Economic value in inventory", q5_path %></li>         
+        <li><%= link_to "Movie and number of copies", q6_path %></li>
       </ul>
       </li>
-    </ul>        
+    </ul> 
+
+    <ul class="nav navbar-nav">
+      <li class="dropdown">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Directors<span class="caret"></span></a>
+      <ul class="dropdown-menu" role="menu">
+        <li><%= link_to "Directors", directors_path %></li>          
+        <li class="divider"></li>                   
+        <li><%= link_to "Movies and their director", q4_path %></li>
+      </ul>
+      </li>
+    </ul>  
+
   </div><!-- /.navbar-collapse -->
 </div>
 </nav>

@@ -1,8 +1,8 @@
 <div class="container">
     <div class="col-md-6">
-        <h4>Members that were born same year as Lorna Smith</h4>
+        <h3>Members born same year as Lorna Smith</h3>
     </div>
-    <table class="table table-bordered table-striped table-condensed">
+    <table class="table table-bordered table-striped table-condensed table-hover report-table">
         <thead>
             <div class="row">
                 <tr>
@@ -15,8 +15,8 @@
         <div class="row">
             <% @vquery.each do |p| %>
                 <tr>
-                <td><%= p['fName'] %></td>
-                <td><%= p['lName'] %></td>
+                <td><%= p['first_name'] %></td>
+                <td><%= p['last_name'] %></td>
                 </tr>
             <% end %>
         </div>
