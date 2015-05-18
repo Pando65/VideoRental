@@ -44,3 +44,5 @@ app/.DS_Store
 app/views/.DS_Store
 app/views/reports/.DS_Store
 db/.DS_Store
+
+*.log
